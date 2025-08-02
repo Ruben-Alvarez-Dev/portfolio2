@@ -1,0 +1,114 @@
+.burger-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001; /* Por debajo del botón de hamburguesa */
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none; /* Permite hacer clic a través del overlay */
+}
+
+.burger-overlay__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  pointer-events: auto; /* Permite hacer clic en el fondo para cerrar */
+}
+
+.burger-overlay__content {
+  position: relative;
+  width: 280px;
+  height: 100%;
+  background-color: var(--surface);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  animation: slideIn 0.3s ease-out forwards;
+  padding: 1.5rem;
+  padding-top: 5rem; /* Más espacio en la parte superior */
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  pointer-events: auto; /* Permite hacer clic en los elementos del menú */
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.burger-overlay__list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.burger-overlay__item {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.burger-overlay__item:nth-child(1) { animation-delay: 0.1s; }
+.burger-overlay__item:nth-child(2) { animation-delay: 0.15s; }
+.burger-overlay__item:nth-child(3) { animation-delay: 0.2s; }
+.burger-overlay__item:nth-child(4) { animation-delay: 0.25s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* El botón de cierre ahora es el mismo botón de hamburguesa en la barra superior */
+
+.burger-overlay__link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.burger-overlay__link:hover,
+.burger-overlay__link:focus-visible {
+  background-color: var(--surface-variant);
+  color: var(--primary);
+  outline: none;
+}
+
+/* Animación de salida */
+.burger-overlay--closing .burger-overlay__content {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Para pantallas más grandes, el menú de hamburguesa no debe mostrarse */
+@media (min-width: 992px) {
+  .burger-overlay {
+    display: none;
+  }
+}

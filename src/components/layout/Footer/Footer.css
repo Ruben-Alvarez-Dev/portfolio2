@@ -1,0 +1,10 @@
+.footer-component {
+  background-color: var(--surface);
+  color: var(--text-secondary);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  margin-top: auto; /* Para que el footer se mantenga abajo */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}

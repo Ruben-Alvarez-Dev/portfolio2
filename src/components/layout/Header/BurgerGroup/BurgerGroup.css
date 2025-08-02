@@ -1,0 +1,18 @@
+.burger-group {
+  display: none; /* Oculto por defecto, se mostrará en móviles */
+  position: relative;
+  z-index: 1002; /* Por encima del overlay */
+}
+
+.burger-group__button-container {
+  position: relative;
+  z-index: 1003; /* Un nivel por encima del overlay */
+}
+
+/* Mostrar solo en móviles */
+@media (max-width: 991px) {
+  .burger-group {
+    display: block;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,13 @@
+/* Logo group container */
+.header__logoGroup {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 2rem;
+  height: 100%;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+/* Logo image and title styling */
+/* Los estilos específicos se aplican en los componentes individuales */

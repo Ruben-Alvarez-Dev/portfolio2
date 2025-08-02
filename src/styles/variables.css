@@ -1,0 +1,61 @@
+:root {
+  /* Tema Claro */
+  --light-primary: #4361ee;      /* Azul vibrante */
+  --light-secondary: #3f37c9;   /* Azul más oscuro */
+  --light-background: #f8f9fa;   /* Fondo claro */
+  --light-surface: #ffffff;      /* Superficie blanca */
+  --light-text: #212529;        /* Texto oscuro */
+  --light-text-secondary: #6c757d; /* Texto secundario */
+  --light-border: #dee2e6;      /* Borde claro */
+  --light-hover: #e9ecef;       /* Color de hover */
+  --light-accent: #4cc9f0;      /* Color de acento */
+  --light-error: #e63946;       /* Color de error */
+
+  /* Tema Oscuro */
+  --dark-primary: #4895ef;      /* Azul brillante */
+  --dark-secondary: #4361ee;    /* Azul medio */
+  --dark-background: #0f172a;   /* Fondo oscuro */
+  --dark-surface: #1e293b;      /* Superficie oscura */
+  --dark-text: #f8fafc;         /* Texto claro */
+  --dark-text-secondary: #94a3b8; /* Texto secundario */
+  --dark-border: #334155;       /* Borde oscuro */
+  --dark-hover: #1e40af;        /* Color de hover */
+  --dark-accent: #60a5fa;       /* Color de acento */
+  --dark-error: #f87171;        /* Color de error */
+
+  /* Valores por defecto (tema claro) */
+  --primary: var(--light-primary);
+  --secondary: var(--light-secondary);
+  --background: var(--light-background);
+  --surface: var(--light-surface);
+  --text: var(--light-text);
+  --text-secondary: var(--light-text-secondary);
+  --border: var(--light-border);
+  --hover: var(--light-hover);
+  --accent: var(--light-accent);
+  --error: var(--light-error);
+
+  /* Colores corporativos */
+  --primary-color: #4361ee;    /* Azul corporativo */
+  --secondary-color: #7209b7;  /* Morado corporativo */
+  --accent-color: #06d6a0;     /* Verde corporativo */
+}
+
+/* Clase para tema oscuro */
+[data-theme="dark"] {
+  --primary: var(--dark-primary);
+  --secondary: var(--dark-secondary);
+  --background: var(--dark-background);
+  --surface: var(--dark-surface);
+  --text: var(--dark-text);
+  --text-secondary: var(--dark-text-secondary);
+  --border: var(--dark-border);
+  --hover: var(--dark-hover);
+  --accent: var(--dark-accent);
+  --error: var(--dark-error);
+
+  /* Colores corporativos para tema oscuro */
+  --primary-color: #4895ef;    /* Azul corporativo */
+  --secondary-color: #9d4edd;  /* Morado corporativo */
+  --accent-color: #06d6a0;     /* Verde corporativo */
+}

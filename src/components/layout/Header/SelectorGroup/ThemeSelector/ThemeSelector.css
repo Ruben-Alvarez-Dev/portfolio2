@@ -1,0 +1,33 @@
+/* Theme icon styling (moon/sun) */
+.theme-icon {
+  font-size: 12px;
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left theme icon specific positioning */
+.theme-icon--left {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Right theme icon specific positioning */
+.theme-icon--right {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Inactive theme icon (greyed out) */
+.theme-icon.inactive {
+  opacity: 0.7;
+  filter: grayscale(0.7) brightness(0.8);
+}

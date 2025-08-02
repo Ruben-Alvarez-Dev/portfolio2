@@ -1,0 +1,16 @@
+.main-component {
+  padding: 2rem 1rem;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .main-component {
+    padding: 2rem;
+  }
+}

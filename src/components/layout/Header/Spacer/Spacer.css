@@ -1,0 +1,13 @@
+/* Spacer component - opposite behavior to navbar */
+.header__spacer {
+  flex: 1; /* Takes remaining space */
+  height: 100%; /* Same height as other elements */
+  display: block; /* Visible by default on mobile */
+}
+
+/* Desktop: hide spacer when navbar is visible */
+@media (min-width: 992px) {
+  .header__spacer {
+    display: none; /* Hidden on desktop - navbar takes over */
+  }
+}

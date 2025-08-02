@@ -1,0 +1,32 @@
+/* Navbar group container */
+.header__navbarGroup {
+  flex: 1;
+  display: none; /* Hidden by default on mobile */
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Navigation list */
+.navbar__list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+  align-items: center;
+}
+
+/* Responsive styles for desktop */
+@media (min-width: 992px) {
+  .header__navbarGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+}

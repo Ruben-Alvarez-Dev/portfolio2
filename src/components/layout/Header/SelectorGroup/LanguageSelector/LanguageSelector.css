@@ -1,0 +1,25 @@
+/* Language item styling (EN/ES text) */
+.language-item {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Language item styling for dark theme */
+[data-theme="dark"] .language-item {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Active language item */
+.language-item.active {
+  opacity: 1;
+}
+
+/* Inactive language item */
+.language-item.inactive {
+  opacity: 0.6;
+}

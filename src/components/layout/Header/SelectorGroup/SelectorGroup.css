@@ -1,0 +1,9 @@
+/* Selector group container */
+.selector-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Reduced gap between selectors */
+  height: 100%;
+  flex-shrink: 0; /* Prevent shrinking */
+  margin-right: 0.5rem; /* Small gap before burger */
+}
