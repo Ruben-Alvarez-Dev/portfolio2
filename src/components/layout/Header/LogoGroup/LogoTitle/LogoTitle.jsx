@@ -3,7 +3,9 @@ import './LogoTitle.css';
 
 const LogoTitle = () => {
   return (
-    <h1 className="logo__title">Dev Portfolio</h1>
+    <h1 className="logo__title">
+      <a href="/">Dev Portfolio</a>
+    </h1>
   );
 };
 

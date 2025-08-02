@@ -37,9 +37,8 @@ main {
   overflow-y: auto; /* Add scroll if content overflows */
 }
 
-/* Footer takes 2rem height */
+/* Footer takes remaining space */
 footer {
-  height: 2rem;
   width: 100%;
   flex-shrink: 0;
 }
@@ -80,13 +79,4 @@ footer {
 
 .read-the-docs {
   color: #888;
-}
-
-.footer-component {
-  background-color: #f8f9fa;
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #e7e7e7;
-  flex: 0 0 auto; /* No se estira, mantiene altura fija */
 }

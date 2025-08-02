@@ -3,7 +3,9 @@ import './LogoImage.css';
 
 const LogoImage = () => {
   return (
-    <div className="logo__box">RA</div>
+    <a href="/">
+      <div className="logo__box">RA</div>
+    </a>
   );
 };
 
