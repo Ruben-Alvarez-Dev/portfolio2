@@ -15,14 +15,14 @@
 /* Left theme icon specific positioning */
 .theme-icon--left {
   margin: 0;
-  padding: 0;
+  padding: 0.3rem;
   text-align: center;
 }
 
 /* Right theme icon specific positioning */
 .theme-icon--right {
   margin: 0;
-  padding: 0;
+  padding: 0.3rem;
   text-align: center;
 }
 
