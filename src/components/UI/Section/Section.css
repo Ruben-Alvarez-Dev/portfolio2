@@ -1,0 +1,27 @@
+/* Base Section component styles */
+.section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 2rem 35vh 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 70px; /* To account for fixed header when navigating */
+}
+
+/* Override padding for contact section */
+.section.contact {
+  padding-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem 1rem 35vh 1rem;
+  }
+  
+  .section.contact {
+    padding-bottom: 1rem;
+  }
+}
