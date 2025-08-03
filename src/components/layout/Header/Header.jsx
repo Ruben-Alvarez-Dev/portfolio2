@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import useTheme from '@/hooks/useTheme';
 import LogoGroup from './LogoGroup/LogoGroup';
 import NavbarGroup from './NavbarGroup/NavbarGroup';
@@ -11,9 +11,38 @@ import './Header.css';
  * Main header component
  * Contains logo, navigation, selectors and burger menu
  */
-const Header = () => {
+const Header = ({ mainRef }) => {
   const [currentLanguage, setCurrentLanguage] = useState('en');
+  const [isScrolled, setIsScrolled] = useState(false);
   const { isDark, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    if (!mainRef?.current) {
+      console.log('mainRef no está disponible');
+      return;
+    }
+
+    const mainElement = mainRef.current;
+    
+    const handleScroll = () => {
+      // Verifica si el main está siendo desplazado
+      const scrollPosition = mainElement.scrollTop;
+      const shouldBeScrolled = scrollPosition > 10;
+      console.log('Scroll position:', scrollPosition, 'Scrolled:', shouldBeScrolled);
+      setIsScrolled(shouldBeScrolled);
+    };
+
+    // Añadir el event listener para el scroll
+    mainElement.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Verificar el estado inicial
+    handleScroll();
+
+    // Limpiar
+    return () => {
+      mainElement.removeEventListener('scroll', handleScroll);
+    };
+  }, [mainRef]);
 
   const handleLanguageChange = (lang) => {
     setCurrentLanguage(lang);
@@ -21,7 +50,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header__container">
         <LogoGroup />
         <NavbarGroup />

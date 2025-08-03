@@ -5,17 +5,28 @@
 }
 
 .nav-item__link {
-  color: var(--text);
+  color: white; /* Texto blanco por defecto */
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
   padding: 0.5rem 0;
   position: relative;
   display: block;
 }
 
+/* Cambio de color al hacer hover */
 .nav-item__link:hover {
   color: var(--primary);
+}
+
+/* Color negro cuando el header tiene scroll */
+.header.scrolled .nav-item__link {
+  color: black;
+}
+
+/* Efecto hover cuando el header tiene scroll */
+.header.scrolled .nav-item__link:hover {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .nav-item__link::after {

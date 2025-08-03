@@ -1,9 +1,16 @@
 .logo__title {
-  color: var(--text);
+  color: white; /* Texto blanco por defecto */
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+/* Tamaño reducido cuando el header está scrolleado */
+.header.scrolled .logo__title {
+  font-size: 1.1rem;
+  color: black; /* Texto negro al hacer scroll */
 }
 
 /* Link styling for logo title */

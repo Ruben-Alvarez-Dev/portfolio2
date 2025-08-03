@@ -1,7 +1,7 @@
 /* Circular logo with RA initials and corporate gradient */
 .logo__box {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   border-radius: 50%;
@@ -9,7 +9,15 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border: 1px solid white;
+  transition: all 0.3s ease;
+}
+
+/* Tamaño reducido cuando el header está scrolleado */
+.header.scrolled .logo__box {
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1rem;
 }
